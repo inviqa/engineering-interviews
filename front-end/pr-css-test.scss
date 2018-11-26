@@ -1,0 +1,60 @@
+$c-red: #00FF00;
+$c-black: #000;
+
+.price {
+    color: $c-red;
+    font-size: rem-calc(15);
+    @include breakpoint(medium) {
+        font-size: rem-calc(18);
+    }
+    @include breakpoint(large) {
+        font-size: rem-calc(21);
+    }
+
+    &__tax {
+        font-size: 0.7em;
+    }
+}
+
+.product {
+    &__name {
+        color: lighten($c-black, 23);
+        height: 3em;
+        overflow: hidden;
+        margin: 0 !important;
+        font-size: rem-calc(13);
+        @include breakpoint(medium) {
+            font-size: rem-calc(15);
+        }
+        @include breakpoint(xxlarge) {
+            font-size: rem-calc(16);
+        }
+    }
+
+    &_item {
+        padding-left: 10px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 2px;
+    }
+
+    .price {
+        font-weight: 900;
+        margin: 0;
+    }
+
+    #smallprint {
+        color: red;
+        font-size: 10pt;
+    }
+
+    p:nth-of-type(2) {
+        padding: 0px;
+        text-align: right;
+        text-decoration: underline;
+        width: 100%;
+        span {
+            margin:10px 0;
+        }
+    }
+}
